@@ -1,0 +1,34 @@
+// Import Bootstrap source files (Required file)
+@import "variable";
+@import "navbar";
+@import "font";
+@import "component";
+
+body {
+  background-color: $background-color;
+  background-image: url("../images/footer.webp");
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-size: auto;
+}
+
+.cat-layout {
+  position: absolute;
+  bottom: 0px;
+  right: 50px;
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  display: none;
+}
+
+
+.v-lazy-image {
+  filter: blur(3px);
+  transition: filter 0.7s;
+}
+.v-lazy-image-loaded {
+  filter: blur(0);
+}

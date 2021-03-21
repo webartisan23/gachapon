@@ -1,0 +1,68 @@
+.custom-button-1 {
+  border-radius: 5px;
+  filter: drop-shadow(0px 3px 3.5px rgba(0, 0, 0, 0.72));
+  background-color: #190705;
+  color: #fbb605;
+  font-family: "Togalite-Heavy";
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px 10px;
+  padding: 0px 20px;
+  cursor: pointer;
+}
+
+.custom-button-1.active {
+  color: #FFFFFF;
+}
+
+.custom-button-2 {
+  padding: 20px 30px;
+  background-image: linear-gradient(180deg, #240906 0%, #000000 100%);
+  border: 1.5px solid #260000;
+  color: $main-color;
+  font-family: "BLAME";
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.custom-button-3 {
+  margin: 10px 10px;
+  padding: 10px 20px;
+  border-radius: 7px;
+  color: $main-color;
+  font-family: "Togalite-Bold";
+  filter: drop-shadow(0px 3px 3.5px rgba(0, 0, 0, 0.9));
+  background-image: linear-gradient(180deg, #411717 0%, #000000 100%);
+  cursor: pointer;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.custom-button-3.disabled {
+  color: #84795c;
+  cursor: not-allowed;
+}
+.gradient-button {
+  filter: drop-shadow(0px 3px 3.5px rgba(0, 0, 0, 0.9));
+  background-image: linear-gradient(180deg, #411717 0%, #000000 100%);
+  color: $main-color;  
+}
+.gradient-button .fa{
+  color: white;
+}
+.gradient-button:hover {
+  color: white;
+}
+.gradient-bg {
+  filter: drop-shadow(0px 3px 11.5px #000000) !important;
+  background-image: linear-gradient(180deg, #3c1713 0%, #000000 100%) !important;
+}
