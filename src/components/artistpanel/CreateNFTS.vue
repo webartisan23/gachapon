@@ -5,7 +5,7 @@
         Create your nft!
       </h4>
       <div class="col-12 d-flex justify-content-center">
-        <form class="w-50">
+        <form :class="{ 'w-100' : $isMobile, 'w-50' : !$isMobile }">
           <div class="form-group">
             <label class="text-uppercase">*Name</label>
             <input type="text" class="form-control" value="Jhon Doe" />
@@ -38,7 +38,7 @@ Check out my machines</textarea
               </div>
               <button class="btn btn-lg gradient-button mt-2">
                 <span class="text-uppercase">Upload image</span
-                ><i class="ml-3 fa fa-upload"></i>
+                ><img src="/icons/edit-image-256.svg" class="img-icon" alt="">
               </button>
             </div>
           </div>
@@ -54,7 +54,7 @@ Check out my machines</textarea
           </div>
           <div class="w-100 text-center mt-5">
             <button class="btn btn-lg p-4 gradient-button" type="button">
-              <span class="text-uppercase">Create</span><i class="ml-3 fa fa-floppy-o"></i>
+              <span class="text-uppercase">Create</span><img src="/icons/save-256.svg" class="img-icon" alt="">
             </button>
           </div>           
         </form>

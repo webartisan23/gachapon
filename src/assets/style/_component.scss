@@ -53,7 +53,7 @@
 }
 .gradient-button {
   filter: drop-shadow(0px 3px 3.5px rgba(0, 0, 0, 0.9));
-  background-image: linear-gradient(180deg, #411717 0%, #000000 100%);
+  background-image: linear-gradient(160deg, #411717 0%, #000000 100%);
   color: $main-color;  
 }
 .gradient-button .fa{
@@ -65,4 +65,12 @@
 .gradient-bg {
   filter: drop-shadow(0px 3px 11.5px #000000) !important;
   background-image: linear-gradient(180deg, #3c1713 0%, #000000 100%) !important;
+}
+.form-control,.form-control:focus,.gradient-button:focus {
+  border : 1px solid $main-color;
+}
+.img-icon{
+  height: 20px;
+  width: 20px;
+  margin-left: 5px;
 }

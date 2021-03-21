@@ -2,8 +2,8 @@
   <div class="card route-card gradient-bg">
     <div class="card-body d-flex flex-column align-items-center">
       <h4 class="font-weight-normal text-uppercase mb-4 text-center">Edit your profile</h4>
-      <div class="col-12 d-flex justify-content-between">        
-        <div class="col-8 d-flex">
+      <div class="col-12" :class="{'d-flex justify-content-between' : !$isMobile}">        
+        <div class="col-xs-12 col-md-8 d-flex" :class="{ 'p-0' : $isMobile}">
           <form class="w-100">
             <div class="form-group">
               <label class="text-uppercase">*Name</label>
@@ -43,16 +43,16 @@
             </div>                    
           </form>
         </div>
-        <div class="col-3 d-flex align-items-end flex-column">
+        <div class="col-xs-12 col-md-3 d-flex align-items-end flex-column">
           <div>
             <img src="../../assets/images/chonker-avatar.png" alt="..." class="img-thumbnail rounded-circle mb-3">
             <button class="btn btn-block gradient-button">
-              <span class="text-uppercase">Edit Avatar</span><i class="ml-3 fa fa-pencil"></i>
+              <span class="text-uppercase">Edit Avatar</span> <img src="/icons/edit-image-256.svg" class="img-icon" alt="">
             </button>
           </div>
           <div class="mt-auto p-2">
             <button class="btn btn-block btn-lg gradient-button">
-              <span class="text-uppercase">Update</span><i class="ml-3 fa fa-floppy-o"></i>
+              <span class="text-uppercase">Update</span><img src="/icons/save-256.svg" class="img-icon" alt="">
             </button>
           </div>          
         </div>

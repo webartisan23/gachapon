@@ -2,7 +2,7 @@
   <div class="card route-card gradient-bg">
     <div class="card-body d-flex flex-column align-items-center">
       <div class="col-12 w-100 text-center">
-        <img src="../../assets/images/chonkenomics.webp" alt="..." class="">
+        <img src="../../assets/images/chonkenomics.webp" alt="..." :class="{'w-100' : $isMobile }">
       </div>
       <h4 class="font-weight-normal text-uppercase mb-4 text-center">
         Welcome creator!

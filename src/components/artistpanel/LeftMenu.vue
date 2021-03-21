@@ -12,7 +12,7 @@
         :key="index" 
         :class="{'text-white' : (currentPage == link.link)}"
         @click="$router.push('/artist-panel/'+link.link)">
-          <span class="text-uppercase">{{link.name}}</span><i class="ml-3 fa " :class="[link.icon]"></i>
+          <span class="text-uppercase">{{link.name}}</span> <img :src="'/icons/'+link.icon" class="img-icon" alt="">
         </button>
       </div>
     </div>
@@ -27,22 +27,22 @@ export default {
       links: [
         {
           name: 'edit profile',
-          icon: 'fa-pencil',
+          icon: 'edit-user-256.svg',
           link: 'profile'
         },
         {
           name: 'create nfts',
-          icon: 'fa-plus-circle',
+          icon: 'plus-5-256.svg',
           link: 'create-nfts'
         },
         {
           name: 'manage nfts',
-          icon: 'fa-bullseye',
+          icon: 'pokemnon.svg',
           link: 'manage-nfts'
         },
         {
           name: 'manage machine',
-          icon: 'fa-cogs',
+          icon: 'services-1.svg',
           link: 'manage-machine'
         }
       ]

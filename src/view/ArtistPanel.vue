@@ -1,11 +1,11 @@
 <template>
   <div class="artist-layout">
     <div class="card artist-layout-card w-100 mb-5">
-      <div class="card-body p-5 d-flex">
-        <div class="col-3 p-0">
+      <div class="card-body p-5 d-flex flex-wrap">
+        <div class="col-xs-12 col-md-3 p-0">
           <LeftMenu />
         </div>        
-        <div class="col-9 p-0 pl-4">
+        <div class="col-xs-12 col-md-9 p-0" :class="{'pl-4' : !$isMobile}">
           <router-view></router-view>
         </div>
       </div>
@@ -36,6 +36,9 @@ export default {
   //     });
   //   }
   // }
+  ,mounted : function(){
+    
+  }
 };
 </script>
 
@@ -57,5 +60,8 @@ export default {
   background: none;
   border-radius: 20px 20px 0px 0px;
   border: 4px solid $main-color;
+}
+* {
+  font-family: 'Togalite-Medium';
 }
 </style>

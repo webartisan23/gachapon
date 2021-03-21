@@ -8,25 +8,26 @@
         <div class="card gradient-bg content-card w-100">
           <div class="card-header text-center text-uppercase">
             <h5 class="font-weight-light">
-              <i class="fa fa-cogs text-white mr-2"></i> Machine settings
+              <img src="/icons/services-1.svg" class="img-icon" alt=""> Machine settings
             </h5>
           </div>
-          <div class="card-body w-75 mx-auto">
-            <div class="col-12 p-0 d-flex">
-              <div class="col-6">
+          <div class="card-body w-75 mx-auto" :class="{'w-100' : $isMobile}">
+            <div class="col-12 p-0" :class="{'d-flex' : !$isMobile}">
+              <div class="col-md-6 col-xs-12">
                 <select name="" id="" class="form-control">
                   <option value="Death machine">Death machine</option>
                 </select>
               </div>
-              <div class="col-6">
+              <div class="col-md-6 col-xs-12">
                 <button class="btn btn-block gradient-button">
                   <span class="text-uppercase">Go to machine page</span
-                  ><i class="ml-3 fa fa-bullseye"></i>
+                  ><img src="/icons/pokemnon.svg" class="img-icon" alt="">
                 </button>
               </div>
             </div>
             <div
-              class="col-12 p-4 d-flex gradient-bg content-card my-4 justify-content-between"
+              class="col-12 p-4 gradient-bg content-card my-4 justify-content-between"
+              :class="{'d-flex' : !$isMobile}"
             >
               <h4 class="text-uppercase text-white">[machine-status]: live</h4>
               <button class="btn gradient-button">
@@ -66,16 +67,16 @@ Get the carziest looking</textarea
                   <label class="text-uppercase"
                     >Rate per spin: [TAIYAKI or ETH]</label
                   >
-                  <div class="col-8 d-flex p-0 mb-3">
-                    <div class="col-3 p-0">
+                  <div class="col-md-8 col-xs-12 p-0 mb-3" :class="{'d-flex' : !$isMobile}">
+                    <div class="col-md-3 col-xs-12 p-0">
                       <input type="text" class="form-control" value="1" />
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6 col-xs-12" :class="{'p-0' : $isMobile}">
                       <select name="" id="" class="form-control">
                         <option value="TAIYAKI">TAIYAKI</option>
                       </select>
                     </div>
-                    <div class="col-4 p-0">
+                    <div class="col-md-4 col-xs-12 p-0">
                       <button class="btn gradient-button">
                         <span class="text-uppercase">apply</span
                         ><i class="ml-3 fa fa-floppy-o"></i>
@@ -100,11 +101,11 @@ Get the carziest looking</textarea
             <div
               v-for="(stat, index) in stats"
               :key="index"
-              class="card text-center col-5 m-2 gradient-brown content-card "
+              class="card text-center col-md-5 col-xs-12 m-2 gradient-brown content-card "
             >
               <div class="card-body text-uppercase px-0">
                 <h5 class="card-title ">{{ stat.title }}</h5>
-                <p class="card-text display-4">
+                <p class="card-text" :class="{'display-4' : !$isMobile}">
                   {{ stat.value }}
                 </p>
               </div>

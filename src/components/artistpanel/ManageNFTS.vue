@@ -12,13 +12,13 @@
             </h5>
           </div>
           <div class="card-body w-100 mx-auto">
-            <div class="col-8 p-0 d-flex float-right mb-4">
-              <div class="col-6">
+            <div class="col-xs-12 col-md-8 p-0 d-flex float-right mb-4 flex-wrap">
+              <div class="col-xs-12 col-md-6">
                 <select name="" id="" class="form-control">
                   <option value="">Select Your NFTS!</option>
                 </select>
               </div>
-              <div class="col-6">
+              <div class="col-xs-12 col-md-6">
                 <i
                   class="fa fa-search position-absolute"
                   style="top: 30%;left: 22px;"
@@ -33,27 +33,27 @@
             <div
               class="w-100 scrollable-class d-flex justify-content-center flex-wrap"
             >
-              <div class="card col-3 float-left m-2" v-for="i in 20" :key="i">
+              <div class="card col-xs-12 col-md-3 float-left m-2" v-for="i in 20" :key="i">
                 <img
                   class="card-img-top"
                   src="../../assets/images/inside3.png"
                   alt="Card image cap"
                 />
-                <div class="card-footer">Zombie slayer</div>
+                <div class="card-footer" :class="{'p-0' : $isMobile}">Zombie slayer</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-12 p-0 d-flex mt-4">
-        <div class="col-7 d-flex">
+      <div class="col-12 p-0 mt-4" :class="{'d-flex' : !$isMobile}">
+        <div class="col-md-7 col-xs-12 d-flex">
           <div class="card route-card-left w-100">
             <div class="card-header text-right text-uppercase">
               <h5 class="font-weight-light">nft information</h5>
             </div>
             <div class="card-body w-100 mx-auto">
               <div class="row">
-                <div class="col-6">
+                <div class="col-md-6 col-xs-12">
                   <div class="card route-card-left w-100">
                     <div class="card-header text-right text-uppercase">
                       <span class="font-weight-light">Zombie Slayer</span>
@@ -86,7 +86,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6 col-xs-12">
                   <div class="card w-100">
                     <img
                       class="card-img-top"
@@ -98,7 +98,7 @@
                 </div>
               </div>
               <div class="row mt-4">
-                <div class="col-6">
+                <div class="col-md-6 col-xs-12">
                   <div
                     class="w-100 d-flex justify-content-center align-items-center"
                     style="height:200px"
@@ -106,7 +106,7 @@
                     <h2>Properties</h2>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6 col-xs-12">
                   <div class="card content-card rounded-0" style="height:200px">
                     <div
                       class="card-body p-0 no-padding w-100 d-flex justify-content-center align-items-center"
@@ -129,7 +129,7 @@ The Chokin Dead</textarea
             </div>
           </div>
         </div>
-        <div class="col-5 d-flex">
+        <div class="col-md-5 col-xs-12 d-flex">
           <div class="card route-card-right w-100">
             <div class="card-header text-right text-uppercase">
               <h5 class="font-weight-light">load into machine</h5>
@@ -146,11 +146,11 @@ The Chokin Dead</textarea
                 <div class="form-group">
                   <h4 class="text-uppercase font-weight-light text-center"
                     >Load non-minted nft</h4>
-                  <div class="col-12 d-flex p-0 mb-1">
-                    <div class="col-8 p-0">
+                  <div class="col-12 p-0 mb-1" :class="{'d-flex' : !$isMobile}">
+                    <div class="col-md-8 col-xs-12 p-0">
                       <input type="text" class="form-control text-center" value="1" />
                     </div>                    
-                    <div class="col-4 p-0 ml-2">
+                    <div class="col-md-4 col-xs-12 p-0 ml-2">
                       <button class="btn gradient-button">
                         <span class="text-uppercase">load</span
                         ><i class="ml-3 fa fa-arrow-circle-o-up"></i>
@@ -163,11 +163,11 @@ The Chokin Dead</textarea
                 <div class="form-group">
                   <h4 class="text-uppercase font-weight-light text-center"
                     >Load minted nft</h4>
-                  <div class="col-12 d-flex p-0 mb-1">
-                    <div class="col-8 p-0">
+                  <div class="col-12  p-0 mb-1" :class="{'d-flex' : !$isMobile}">
+                    <div class="col-md-8 col-xs-12 p-0">
                       <input type="text" class="form-control text-center" value="1" />
                     </div>                    
-                    <div class="col-4 p-0 ml-2">
+                    <div class="col-md-4 col-xs-12 p-0 ml-2">
                       <button class="btn gradient-button">
                         <span class="text-uppercase">load</span
                         ><i class="ml-3 fa fa-arrow-circle-o-up"></i>
@@ -175,6 +175,7 @@ The Chokin Dead</textarea
                     </div>
                   </div>
                    <label class="text-uppercase font-weight-light text-center"
+                   :class="{'mb-4' : $isMobile}"
                     >Available to load : 2 [MAX 300 per tx]</label>
                 </div>
                 </div>             
