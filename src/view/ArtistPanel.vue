@@ -2,10 +2,10 @@
   <div class="artist-layout">
     <div class="card artist-layout-card w-100 mb-5">
       <div class="card-body p-5 d-flex">
-        <div class="col-4 p-0">
+        <div class="col-3 p-0">
           <LeftMenu />
         </div>        
-        <div class="col-8 p-0 pl-4">
+        <div class="col-9 p-0 pl-4">
           <router-view></router-view>
         </div>
       </div>

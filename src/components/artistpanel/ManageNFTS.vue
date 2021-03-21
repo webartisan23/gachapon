@@ -111,24 +111,12 @@
                     <div
                       class="card-body p-0 no-padding w-100 d-flex justify-content-center align-items-center"
                     >
-                      <table>
-                        <tr>
-                          <td>[Artist] -</td>
-                          <td>Chonk Chan</td>
-                        </tr>
-                        <tr>
-                          <td>[Tag] -</td>
-                          <td>7</td>
-                        </tr>
-                        <tr>
-                          <td>[Rarity] -</td>
-                          <td>7</td>
-                        </tr>
-                        <tr>
-                          <td>[Max Supply] -</td>
-                          <td>7</td>
-                        </tr>
-                      </table>
+                      <ul class="" style="list-style-type: none;">
+                        <li class="">[Artist] - Chonk Chan</li>
+                        <li class="">[Tag] - Chonker Finance</li>
+                        <li class="">[Rarity] - EPIC 5 star</li>
+                        <li class="">[Max Supply] - 25</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -147,17 +135,49 @@ The Chokin Dead</textarea
               <h5 class="font-weight-light">load into machine</h5>
             </div>
             <div class="card-body w-100 mx-auto">
-              <h4 for="" class="float-right font-weight-light">Select machine</h4>
+              <h4 for="" class="float-right font-weight-light">
+                Select machine
+              </h4>
               <select name="" id="" class="form-control">
                 <option value="">Choose your machine</option>
               </select>
-              <div class="d-flex align-items-center" style="height:100%">
+              <div class="d-flex align-items-center flex-wrap" style="height:100%">
                 <div>
-                  <span for="" class="float-right font-weight-light text-uppercase">Loaded non-Minted ntf</span>
-                  <select name="" id="" class="form-control">
-                    <option value="">Choose your machine</option>
-                  </select>
+                <div class="form-group">
+                  <h4 class="text-uppercase font-weight-light text-center"
+                    >Load non-minted nft</h4>
+                  <div class="col-12 d-flex p-0 mb-1">
+                    <div class="col-8 p-0">
+                      <input type="text" class="form-control text-center" value="1" />
+                    </div>                    
+                    <div class="col-4 p-0 ml-2">
+                      <button class="btn gradient-button">
+                        <span class="text-uppercase">load</span
+                        ><i class="ml-3 fa fa-arrow-circle-o-up"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <label class="text-uppercase font-weight-light text-center"
+                    >Available to load : 99 [MAX 300 per tx]</label>
+                </div>                   
+                <div class="form-group">
+                  <h4 class="text-uppercase font-weight-light text-center"
+                    >Load minted nft</h4>
+                  <div class="col-12 d-flex p-0 mb-1">
+                    <div class="col-8 p-0">
+                      <input type="text" class="form-control text-center" value="1" />
+                    </div>                    
+                    <div class="col-4 p-0 ml-2">
+                      <button class="btn gradient-button">
+                        <span class="text-uppercase">load</span
+                        ><i class="ml-3 fa fa-arrow-circle-o-up"></i>
+                      </button>
+                    </div>
+                  </div>
+                   <label class="text-uppercase font-weight-light text-center"
+                    >Available to load : 2 [MAX 300 per tx]</label>
                 </div>
+                </div>             
               </div>
             </div>
           </div>
@@ -192,7 +212,7 @@ export default {
     border-bottom: 2px solid $main-color;
   }
   table > tr > td {
-    padding: 5px;
+    padding: 2px;
   }
   textarea {
     border-radius: 0px 0px 20px 20px;
