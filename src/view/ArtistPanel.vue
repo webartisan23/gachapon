@@ -1,7 +1,7 @@
 <template>
   <div class="artist-layout">
     <div class="card artist-layout-card w-100 mb-5">
-      <div class="card-body p-5 d-flex flex-wrap">
+      <div class="card-body  d-flex flex-wrap" :class="{'p-5' : !$isMobile,'p-2' : $isMobile}">
         <div class="col-xs-12 col-md-3 p-0">
           <LeftMenu />
         </div>        

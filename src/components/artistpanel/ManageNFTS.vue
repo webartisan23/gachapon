@@ -13,7 +13,7 @@
           </div>
           <div class="card-body w-100 mx-auto">
             <div class="col-xs-12 col-md-8 p-0 d-flex float-right mb-4 flex-wrap">
-              <div class="col-xs-12 col-md-6">
+              <div class="col-xs-12 col-md-6" :class="{'mb-2' : $isMobile}">
                 <select name="" id="" class="form-control">
                   <option value="">Select Your NFTS!</option>
                 </select>
@@ -86,8 +86,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 col-xs-12">
-                  <div class="card w-100">
+                <div class="col-md-6 col-xs-12" :class="{'m-2' : $isMobile}">
+                  <div class="card w-100" >
                     <img
                       class="card-img-top"
                       src="../../assets/images/inside3.png"
@@ -126,6 +126,9 @@
               <textarea name="" id="" cols="30" rows="3" class="form-control">
 The Chokin Dead</textarea
               >
+              <div class="text-counter">
+                  <span>Description</span>                
+                </div>
             </div>
           </div>
         </div>
@@ -146,37 +149,39 @@ The Chokin Dead</textarea
                 <div class="form-group">
                   <h4 class="text-uppercase font-weight-light text-center"
                     >Load non-minted nft</h4>
-                  <div class="col-12 p-0 mb-1" :class="{'d-flex' : !$isMobile}">
-                    <div class="col-md-8 col-xs-12 p-0">
+                  <div class="col-12 p-0 mb-1">
+                    <div class="w-50 p-0 float-left">
                       <input type="text" class="form-control text-center" value="1" />
                     </div>
-                    <div class="col-md-4 col-xs-12 p-0 ml-2">
+                    <div class="w-25 p-0 ml-2 float-left">
                       <button class="btn gradient-button">
                         <span class="text-uppercase">load</span
                         ><img src="/icons/upload-256.svg" class="img-icon" alt="">
                       </button>
                     </div>
                   </div>
-                  <label class="text-uppercase font-weight-light text-center"
-                    >Available to load : 99 [MAX 300 per tx]</label>
+                  <div class="clearfix"></div>
+                  <small class="text-uppercase font-weight-light text-center"
+                    >Available to load : 99 [MAX 300 per tx]</small>
                 </div>
                 <div class="form-group">
                   <h4 class="text-uppercase font-weight-light text-center"
                     >Load minted nft</h4>
                   <div class="col-12  p-0 mb-1" :class="{'d-flex' : !$isMobile}">
-                    <div class="col-md-8 col-xs-12 p-0">
+                    <div class="w-50 p-0 float-left">
                       <input type="text" class="form-control text-center" value="1" />
                     </div>
-                    <div class="col-md-4 col-xs-12 p-0 ml-2">
+                    <div class="w-25 p-0 ml-2 float-left">
                       <button class="btn gradient-button">
                         <span class="text-uppercase">load</span
                         ><img src="/icons/upload-256.svg" class="img-icon" alt="">
                       </button>
                     </div>
                   </div>
-                   <label class="text-uppercase font-weight-light text-center"
+                  <div class="clearfix"></div>
+                   <small class="text-uppercase font-weight-light text-center"
                    :class="{'mb-4' : $isMobile}"
-                    >Available to load : 2 [MAX 300 per tx]</label>
+                    >Available to load : 2 [MAX 300 per tx]</small>
                 </div>
                 </div>
               </div>

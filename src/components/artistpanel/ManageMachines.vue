@@ -13,7 +13,7 @@
           </div>
           <div class="card-body w-75 mx-auto" :class="{'w-100' : $isMobile}">
             <div class="col-12 p-0" :class="{'d-flex' : !$isMobile}">
-              <div class="col-md-6 col-xs-12">
+              <div class="col-md-6 col-xs-12" :class="{'mb-2' : $isMobile}">
                 <select name="" id="" class="form-control">
                   <option value="Death machine">Death machine</option>
                 </select>
@@ -32,7 +32,7 @@
               <h4 class="text-uppercase text-white">[machine-status]: live</h4>
               <button class="btn gradient-button">
                 <span class="text-uppercase">pause</span
-                ><i class="ml-3 fa fa-pause"></i>
+                ><img src="/icons/pause-256.svg" class="img-icon" alt="" style="height:15px">
               </button>
             </div>
             <div
@@ -60,7 +60,7 @@ Get the carziest looking</textarea
                   >
                   <button class="btn gradient-button my-2 float-right">
                     <span class="text-uppercase">apply</span
-                    ><i class="ml-3 fa fa-floppy-o"></i>
+                    ><img src="/icons/save-256.svg" class="img-icon" alt="" style="height:15px">
                   </button>
                 </div>
                 <div class="form-group">
@@ -68,10 +68,10 @@ Get the carziest looking</textarea
                     >Rate per spin: [TAIYAKI or ETH]</label
                   >
                   <div class="col-md-8 col-xs-12 p-0 mb-3" :class="{'d-flex' : !$isMobile}">
-                    <div class="col-md-3 col-xs-12 p-0">
+                    <div class="col-md-3 col-xs-12 p-0" :class="{'mb-2' : $isMobile}">
                       <input type="text" class="form-control" value="1" />
                     </div>
-                    <div class="col-md-6 col-xs-12" :class="{'p-0' : $isMobile}">
+                    <div class="col-md-6 col-xs-12" :class="{'p-0 mb-2' : $isMobile}">
                       <select name="" id="" class="form-control">
                         <option value="TAIYAKI">TAIYAKI</option>
                       </select>
@@ -79,7 +79,7 @@ Get the carziest looking</textarea
                     <div class="col-md-4 col-xs-12 p-0">
                       <button class="btn gradient-button">
                         <span class="text-uppercase">apply</span
-                        ><i class="ml-3 fa fa-floppy-o"></i>
+                        ><img src="/icons/save-256.svg" class="img-icon" alt="" style="height:15px">
                       </button>
                     </div>
                   </div>
@@ -93,7 +93,7 @@ Get the carziest looking</textarea
         <div class="card gradient-bg content-card w-100">
           <div class="card-header text-center text-uppercase">
             <h5 class="font-weight-light">
-              <i class="fa fa-line-chart text-white mr-2"></i> Your machine
+              <img src="/icons/combo-256.svg" class="img-icon" alt="" style="height: 25px;width: 25px;" /> Your machine
               analytics
             </h5>
           </div>
