@@ -2,7 +2,7 @@
   <div class="card route-card gradient-bg">
     <div class="card-body d-flex flex-column align-items-center">
       <h4 class="font-weight-normal text-uppercase mb-4 text-center">Edit your profile</h4>
-      <div class="col-12" :class="{'d-flex justify-content-between' : !$isMobile}">        
+      <div class="col-12" :class="{'d-flex justify-content-between' : !$isMobile}">
         <div class="col-xs-12 col-md-8 d-flex" :class="{ 'p-0' : $isMobile}">
           <form class="w-100">
             <div class="form-group">
@@ -11,19 +11,29 @@
                 type="text"
                 class="form-control"
                 value="Jhon Doe"
-              />              
+                v-model.trim="form_data.name"
+              />
+              <div class="text-counter">
+                <span>{{form_data.name.length}} / 200</span>
+                <div class="clearfix"></div>
+              </div>
             </div>
             <div class="form-group">
               <label class="text-uppercase">*Description</label>
-              <textarea name="" id="" cols="30" rows="5" class="form-control">Check out my machines</textarea>
-            </div>   
+              <textarea name="" id=""  v-model.trim="form_data.description" cols="30" rows="5" class="form-control">Check out my machines</textarea>
+               <div class="text-counter">
+                <span>{{form_data.description.length}} / 200</span>
+                <div class="clearfix"></div>
+              </div>
+            </div>
             <div class="form-group">
               <label class="text-uppercase">Instagram <span class="text-lowercase">(optional)</span></label>
               <input
                 type="text"
                 class="form-control"
                 value=""
-              />              
+              />
+
             </div>
             <div class="form-group">
               <label class="text-uppercase">Twitter <span class="text-lowercase">(optional)</span></label>
@@ -31,7 +41,7 @@
                 type="text"
                 class="form-control"
                 value=""
-              />              
+              />
             </div>
             <div class="form-group">
               <label class="text-uppercase">Website <span class="text-lowercase">(optional)</span></label>
@@ -39,8 +49,8 @@
                 type="text"
                 class="form-control"
                 value=""
-              />              
-            </div>                    
+              />
+            </div>
           </form>
         </div>
         <div class="col-xs-12 col-md-3 d-flex align-items-end flex-column">
@@ -54,7 +64,7 @@
             <button class="btn btn-block btn-lg gradient-button">
               <span class="text-uppercase">Update</span><img src="/icons/save-256.svg" class="img-icon" alt="">
             </button>
-          </div>          
+          </div>
         </div>
       </div>
     </div>
@@ -64,6 +74,14 @@
 <script>
 export default {
   name: "EditProfile",
+  data() {
+    return {
+      form_data :{
+        name: '',
+        description: ''
+      }
+    }
+  }
 };
 </script>
 

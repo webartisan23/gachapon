@@ -149,28 +149,28 @@ The Chokin Dead</textarea
                   <div class="col-12 p-0 mb-1" :class="{'d-flex' : !$isMobile}">
                     <div class="col-md-8 col-xs-12 p-0">
                       <input type="text" class="form-control text-center" value="1" />
-                    </div>                    
+                    </div>
                     <div class="col-md-4 col-xs-12 p-0 ml-2">
                       <button class="btn gradient-button">
                         <span class="text-uppercase">load</span
-                        ><i class="ml-3 fa fa-arrow-circle-o-up"></i>
+                        ><img src="/icons/upload-256.svg" class="img-icon" alt="">
                       </button>
                     </div>
                   </div>
                   <label class="text-uppercase font-weight-light text-center"
                     >Available to load : 99 [MAX 300 per tx]</label>
-                </div>                   
+                </div>
                 <div class="form-group">
                   <h4 class="text-uppercase font-weight-light text-center"
                     >Load minted nft</h4>
                   <div class="col-12  p-0 mb-1" :class="{'d-flex' : !$isMobile}">
                     <div class="col-md-8 col-xs-12 p-0">
                       <input type="text" class="form-control text-center" value="1" />
-                    </div>                    
+                    </div>
                     <div class="col-md-4 col-xs-12 p-0 ml-2">
                       <button class="btn gradient-button">
                         <span class="text-uppercase">load</span
-                        ><i class="ml-3 fa fa-arrow-circle-o-up"></i>
+                        ><img src="/icons/upload-256.svg" class="img-icon" alt="">
                       </button>
                     </div>
                   </div>
@@ -178,7 +178,7 @@ The Chokin Dead</textarea
                    :class="{'mb-4' : $isMobile}"
                     >Available to load : 2 [MAX 300 per tx]</label>
                 </div>
-                </div>             
+                </div>
               </div>
             </div>
           </div>
